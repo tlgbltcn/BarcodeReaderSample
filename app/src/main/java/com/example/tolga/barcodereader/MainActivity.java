@@ -8,16 +8,13 @@ import android.widget.TextView;
 import com.google.android.gms.common.api.CommonStatusCodes;
 import com.google.android.gms.vision.barcode.Barcode;
 
-
 public class MainActivity extends Activity{
     TextView barcodeResult;
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
         barcodeResult = (TextView) findViewById(R.id.barcode_result);
 
     }

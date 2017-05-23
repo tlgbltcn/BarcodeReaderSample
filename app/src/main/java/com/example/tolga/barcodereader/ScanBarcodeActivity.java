@@ -76,15 +76,12 @@ public class ScanBarcodeActivity extends Activity {
 
                 @Override
                 public void receiveDetections(Detector.Detections<Barcode> detections) {
-
                     final SparseArray<Barcode> barcodes = detections.getDetectedItems();
                     if(barcodes.size()>0){
                         Intent intent = new Intent();
                         intent.putExtra("barcode",barcodes.valueAt(0)); // son değer
                         setResult(CommonStatusCodes.SUCCESS, intent);
                         finish();
-
-
                     }
 
 
